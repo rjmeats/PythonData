@@ -31,7 +31,7 @@ ph = [ p['Height'] for p in playerInfo if p['National Team'] == "England"]
 
 fig, ax = plt.subplots()
 #ax.plot(ph, pw)
-ax.scatter(ph, pw)
+ax.scatter(pw, ph)
 
 #ax.set(xlabel='time (s)', ylabel='voltage (mV)',
 #       title='About as simple as it gets, folks')
