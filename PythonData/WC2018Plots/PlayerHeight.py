@@ -20,17 +20,17 @@ if __name__ == "__main__" :
         print(len(playerInfo))
 
 pn = list(range(len(playerInfo)))
-pw = [ p['Weight'] for p in playerInfo if p['National Team'] == "England"]
-ph = [ p['Height'] for p in playerInfo if p['National Team'] == "England"]
+pw = list(map(int, [ p['Weight'] for p in playerInfo])) #if p['National Team'] != "XXEngland"]))
+ph = list(map(int, [ p['Height'] for p in playerInfo])) #if p['National Team'] != "XXEngland"]))
 
-#print(ph)
+print(ph)
 
 # Data for plotting
 #t = np.arange(0.0, 2.0, 0.01)
 #s = 1 + np.sin(2 * np.pi * t)
 
 fig, ax = plt.subplots()
-#ax.plot(ph, pw)
+#ax.plot(pw, ph)
 ax.scatter(pw, ph)
 
 #ax.set(xlabel='time (s)', ylabel='voltage (mV)',
