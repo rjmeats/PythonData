@@ -26,18 +26,28 @@ if __name__ == "__main__" :
     
     print('Found details of {0} players'.format(len(playerInfo)))
 
+team1 = "England"
+color1 = "red"
+team2 = "Colombia"
+color2 = "yellow"
+
 pn = list(range(len(playerInfo)))
-pw = list(map(int, [ p['Weight'] for p in playerInfo])) #if p['National Team'] != "XXEngland"]))
-ph = list(map(int, [ p['Height'] for p in playerInfo])) #if p['National Team'] != "XXEngland"]))
+pw1 = list(map(int, [ p['Weight'] for p in playerInfo if p['National Team'] == team1 ]))
+ph1 = list(map(int, [ p['Height'] for p in playerInfo if p['National Team'] == team1 ]))
+pw2 = list(map(int, [ p['Weight'] for p in playerInfo if p['National Team'] == team2 ]))
+ph2 = list(map(int, [ p['Height'] for p in playerInfo if p['National Team'] == team2 ]))
 
 
 fig, ax = plt.subplots()
 #ax.plot(pw, ph)
-ax.scatter(pw, ph)
+ax.scatter(pw1, ph1, color=color1, label=team1)
+ax.scatter(pw2, ph2, color=color2, label=team2)
 
 ax.set(xlabel='Weight (kg)', ylabel='Height (cm)', title='World Cup 2018\nPlayer heights and weights')
 # ax.grid()
 
 #fig.savefig("test.png")
+
+ax.legend()
 plt.show()
 
