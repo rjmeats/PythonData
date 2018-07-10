@@ -28,7 +28,7 @@ if __name__ == "__main__" :
 
 team1 = "England"
 color1 = "red"
-team2 = "Colombia"
+team2 = "Croatia"
 color2 = "yellow"
 
 pn = list(range(len(playerInfo)))
