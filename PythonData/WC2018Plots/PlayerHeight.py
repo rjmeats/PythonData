@@ -26,8 +26,8 @@ if __name__ == "__main__" :
     
     print('Found details of {0} players'.format(len(playerInfo)))
 
-team1 = "England"
-color1 = "red"
+team1 = "France"
+color1 = "blue"
 team2 = "Croatia"
 color2 = "yellow"
 
